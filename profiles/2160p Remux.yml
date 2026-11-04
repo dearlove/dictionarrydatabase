@@ -1,84 +1,134 @@
 name: 2160p Remux
-description: "2160p Remux utilizes **audio / video tags** to prioritise high quality\
-  \ lossless copies of UHD Blu-rays.\n\n- Unlike the encode profiles, which target\
-  \ releases based on a release group metric, 2160p Remux avoids this to stop *circular\
-  \ downloads* where no discernable upgrade is found. \n- Instead, audio / video metrics\
-  \ such Dolby Vision, TrueHD, Atmos, HDR10+, etc are used to indicate when a remux\
-  \ should be upgraded.\n- For instance, if a hybrid remux that includes some WEB\
-  \ DoVi layer is released, it will be upgraded over the standard non hybrid release,\
-  \ regardless of release group.\n- This also helps to grab non group tagged remuxes,\
-  \ which are fairly common on quite a few trackers who often have the best remux\
-  \ available. \n- If no 2160p Remux cannot be found, the profile falls back to **2160p\
-  \ WEB-DLs**.\n- If a 2160p WEB-DL cannot be found, the profile falls back to the\
-  \ **1080p Remux** profile. "
+description: '2160p Remux utilizes **Video / Audio Formats** to prioritise high quality
+  lossless copies of UHD Blurays.
+
+
+  - Average Movie Sizes ~ 40 to 60gb per Movie
+
+  - Movie Quality Ranking ~ 10/10
+
+  - Average TV Sizes ~ 15 to 30gb per Episode
+
+  - TV Quality Ranking ~ 10/10'
 tags:
 - 2160p
-- Remux
+- Remux Focused
 - HDR
 - Lossless Audio
 - h265
+- x265
 upgradesAllowed: true
 minCustomFormatScore: 20000
-upgradeUntilScore: 400000
+upgradeUntilScore: 888888
 minScoreIncrement: 1
 custom_formats:
 - name: 2160p Remux
-  score: 160000
+  score: 500000
+- name: 2160p Quality Tier 1
+  score: 485000
+- name: 2160p Quality Tier 2
+  score: 484000
+- name: 2160p Quality Tier 3
+  score: 483000
+- name: 2160p Quality Tier 4
+  score: 482000
+- name: 2160p Quality Tier 5
+  score: 480000
 - name: 2160p WEB-DL
-  score: 140000
+  score: 460000
 - name: 1080p Remux
-  score: 120000
+  score: 440000
+- name: UHD Bluray
+  score: 420000
 - name: 1080p WEB-DL
-  score: 100000
+  score: 380000
+- name: 1080p Bluray
+  score: 280000
+- name: 1080p WEBRip
+  score: 280000
+- name: 2160p Quality Tier 6
+  score: 279000
 - name: 720p WEB-DL
+  score: 240000
+- name: 720p Bluray
+  score: 180000
+- name: 720p WEBRip
+  score: 180000
+- name: 1080p Quality Tier 1
+  score: 125000
+- name: 1080p Quality Tier 2
+  score: 124000
+- name: 1080p Quality Tier 3
+  score: 123000
+- name: 1080p Quality Tier 4
+  score: 122000
+- name: 1080p Quality Tier 5
+  score: 121000
+- name: 1080p Quality Tier 6
+  score: 120000
+- name: 576p Bluray
+  score: 120000
+- name: 720p Quality Tier 1
+  score: 85000
+- name: 720p Quality Tier 2
+  score: 84000
+- name: 720p Quality Tier 3
+  score: 83000
+- name: 720p Quality Tier 4
+  score: 82000
+- name: 720p Quality Tier 5
+  score: 81000
+- name: 480p Bluray
+  score: 80000
+- name: 720p Quality Tier 6
   score: 80000
 - name: 480p WEB-DL
   score: 60000
+- name: 576p Quality Tier 1
+  score: 43000
+- name: 576p Quality Tier 2
+  score: 42000
+- name: 576p Quality Tier 3
+  score: 41000
+- name: 576p Quality Tier 4
+  score: 40000
+- name: 480p Quality Tier 1
+  score: 23000
+- name: 480p Quality Tier 2
+  score: 22000
+- name: 480p Quality Tier 3
+  score: 21000
+- name: 480p Quality Tier 4
+  score: 20000
 - name: DVD
   score: 20000
 - name: DVD Remux
   score: 20000
 - name: SD Quality Tier 1
   score: 11000
-- name: DTS-X
-  score: 10000
 - name: SD Quality Tier 2
   score: 10000
-- name: DTS-HD MA
-  score: 8000
-- name: TrueHD
-  score: 8000
-- name: TrueHD (Missing)
-  score: 8000
-- name: FLAC
-  score: 7000
-- name: PCM
-  score: 7000
-- name: DTS-HD HRA
-  score: 5000
-- name: Opus
-  score: 5000
-- name: Dolby Digital +
-  score: 4000
 - name: Dolby Vision
-  score: 3000
-- name: DTS-ES
   score: 3000
 - name: AMZN
   score: 2000
-- name: Atmos
-  score: 2000
-- name: Atmos (Missing)
-  score: 2000
-- name: Dolby Digital
+- name: ATVP
   score: 2000
 - name: HDR10+
   score: 2000
-- name: ATV
-  score: 1000
-- name: DTS
+- name: DTS-X
+  score: 1600
+- name: DTS-HD MA
+  score: 1200
+- name: TrueHD
+  score: 1200
+- name: TrueHD (Missing)
+  score: 1200
+- name: Amazon Enhancement
   score: 1000
 - name: HDR
+  score: 1000
+- name: HDR (Missing)
   score: 1000
 - name: HDR10
   score: 1000
@@ -90,22 +140,44 @@ custom_formats:
   score: 1000
 - name: PQ
   score: 1000
+- name: FLAC
+  score: 800
+- name: PCM
+  score: 800
+- name: DTS-HD HRA
+  score: 700
+- name: Opus
+  score: 700
+- name: Dolby Digital +
+  score: 600
+- name: DTS-ES
+  score: 500
+- name: Atmos
+  score: 400
+- name: Atmos (Missing)
+  score: 400
+- name: Dolby Digital
+  score: 400
+- name: DTS
+  score: 300
+- name: AAC
+  score: 200
+- name: Remux Tier 1
+  score: 100
 - name: WEB-DL Tier 1
   score: 100
-- name: Remux Tier 1
+- name: Remux Tier 2
   score: 80
 - name: WEB-DL Tier 2
   score: 80
-- name: Remux Tier 2
+- name: Remux Tier 3
   score: 60
 - name: WEB-DL Tier 3
   score: 60
-- name: Remux Tier 3
+- name: Remux Tier 4
   score: 40
 - name: WEB-DL Tier 4
   score: 40
-- name: Remux Tier 4
-  score: 20
 - name: WEB-DL Tier 5
   score: 20
 - name: Repack3
@@ -114,17 +186,27 @@ custom_formats:
   score: 7
 - name: Repack1
   score: 6
-- name: AAC
-  score: 0
 - name: BCORE
+  score: 0
+- name: CRAV
+  score: 0
+- name: CRIT
+  score: 0
+- name: DRPO
   score: 0
 - name: HTSR
   score: 0
 - name: HULU
   score: 0
+- name: iP
+  score: 0
+- name: MUBI
+  score: 0
 - name: NOW
   score: 0
 - name: PCOK
+  score: 0
+- name: PLAY
   score: 0
 - name: PMTP
   score: 0
@@ -134,21 +216,25 @@ custom_formats:
   score: 0
 - name: STAN
   score: 0
-- name: AV1
+- name: x265 (Bluray)
+  score: -400000
+- name: ASL
   score: -999999
-- name: B&W
+- name: AV1
   score: -999999
 - name: Banned Groups
   score: -999999
-- name: Banned Groups (Title)
-  score: -999999
 - name: Banned Remux
   score: -999999
-- name: Banned Scene
+- name: Banned UHD Bluray
+  score: -999999
+- name: Banned WEBRip
   score: -999999
 - name: Dolby Vision (Without Fallback)
   score: -999999
 - name: Full Disc
+  score: -999999
+- name: German DL
   score: -999999
 - name: h265
   score: -999999
@@ -158,34 +244,52 @@ custom_formats:
   score: -999999
 - name: x264 (2160p)
   score: -999999
-- name: x265
+- name: x265 (Missing)
+  score: -999999
+- name: x265 (Remux)
+  score: -999999
+- name: x265 (WEB)
   score: -999999
 - name: Xvid
   score: -999999
 custom_formats_radarr:
+- name: 2160p Balanced Tier 1
+  score: 462000
+- name: HONE Blurays
+  score: 462000
+- name: 2160p Balanced Tier 2
+  score: 461000
+- name: 2160p Balanced Tier 3
+  score: 460000
+- name: 1080p Balanced Tier 1
+  score: 101000
+- name: 1080p Balanced Tier 2
+  score: 100000
+- name: 720p Balanced Tier 1
+  score: 60000
 - name: MA
   score: 6000
-- name: ATVP
-  score: 4000
 - name: DSNP
   score: 4000
 - name: iT
   score: 4000
-- name: Amazon Enhancement
-  score: 2000
 - name: HMAX
   score: 2000
 - name: MAX
   score: 2000
 - name: Better Theatricals
   score: 1000
-- name: CRIT
-  score: 1000
 - name: Special Edition
   score: 1000
+- name: Disney+ Enhancement
+  score: -1000
+- name: Movies Anywhere Enhancement
+  score: -2000
 - name: iTunes Enhancement
   score: -3000
 - name: 3D
+  score: -999999
+- name: B&W
   score: -999999
 - name: Extras
   score: -999999
@@ -196,16 +300,16 @@ custom_formats_radarr:
 - name: Upscale
   score: -999999
 custom_formats_sonarr:
-- name: ATVP
-  score: 3000
+- name: 2160p Balanced Tier 1
+  score: 464000
+- name: HONE Blurays
+  score: 464000
 - name: DSNP
   score: 3000
 - name: HMAX
   score: 3000
 - name: MAX
   score: 3000
-- name: Amazon Enhancement
-  score: 1000
 - name: iT
   score: 1000
 - name: Season Pack
@@ -217,26 +321,52 @@ custom_formats_sonarr:
 - name: Upscaled
   score: -999999
 qualities:
-- id: 3
-  name: Remux-2160p
-- id: 5
-  name: WEBDL-2160p
-- id: 8
-  name: Remux-1080p
-- id: 9
-  name: WEBDL-1080p
-- id: 14
-  name: WEBDL-720p
+- id: -4
+  name: 2160p Remux
+  description: ''
+  qualities:
+  - id: 3
+    name: Remux-2160p
+  - id: 4
+    name: Bluray-2160p
+  - id: 5
+    name: WEBDL-2160p
 - id: -1
-  name: SD Fallback
+  name: 1080p Remux
+  description: All capable of being indistinguishable from source. WEB-DL included
+    to not allow unknown encode to trump known WEB-DL.
+  qualities:
+  - id: 8
+    name: Remux-1080p
+  - id: 10
+    name: Bluray-1080p
+  - id: 9
+    name: WEBDL-1080p
+  - id: 11
+    name: WEBRip-1080p
+- id: -2
+  name: 720p Quality
+  description: Fallback to 720p when 1080p cannot be found.
+  qualities:
+  - id: 13
+    name: Bluray-720p
+  - id: 14
+    name: WEBDL-720p
+  - id: 15
+    name: WEBRip-720p
+- id: -3
+  name: 480p Quality
   description: Standard Definition Fallbacks
   qualities:
-  - id: 22
-    name: DVD
+  - id: 17
+    name: Bluray-576p
+  - id: 18
+    name: Bluray-480p
   - id: 19
     name: WEBDL-480p
+  - id: 22
+    name: DVD
 upgrade_until:
-  id: 3
-  name: Remux-2160p
-  description: 4K Ultra HD Blu-ray disc content remuxed into a playable file format
+  id: -4
+  name: 2160p Remux
 language: must_original

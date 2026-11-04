@@ -70,13 +70,18 @@ conditions:
   required: false
   type: release_group
 - name: DeViSiVE
-  type: release_group
-  required: false
   negate: false
   pattern: DeViSiVE
+  required: false
+  type: release_group
 - name: DRX
   negate: false
   pattern: DRX
+  required: false
+  type: release_group
+- name: E
+  negate: false
+  pattern: E
   required: false
   type: release_group
 - name: FGT
@@ -144,19 +149,14 @@ conditions:
   pattern: OEPlus
   required: false
   type: release_group
-- name: PiRaTeS
-  negate: false
-  pattern: PiRaTeS
-  required: false
-  type: release_group
 - name: PSA
   negate: false
   pattern: PSA
   required: false
   type: release_group
-- name: RARGB
+- name: RARBG
   negate: false
-  pattern: RARGB
+  pattern: RARBG
   required: false
   type: release_group
 - name: SasukeducK
@@ -199,6 +199,16 @@ conditions:
   pattern: TvR
   required: false
   type: release_group
+- name: UnKn0wn
+  negate: false
+  pattern: UnKn0wn
+  required: false
+  type: release_group
+- name: VD0N
+  negate: false
+  pattern: VD0N
+  required: false
+  type: release_group
 - name: VECTOR
   negate: false
   pattern: VECTOR
@@ -207,11 +217,6 @@ conditions:
 - name: VisionXpert
   negate: false
   pattern: VisionXpert
-  required: false
-  type: release_group
-- name: WiKi
-  negate: false
-  pattern: WiKi
   required: false
   type: release_group
 - name: x0r

@@ -21,6 +21,11 @@ conditions:
   pattern: x265 (Efficient)
   required: true
   type: release_title
+- name: Not HONE
+  type: release_title
+  required: true
+  negate: true
+  pattern: HONE
 - name: DarQ
   negate: false
   pattern: DarQ
@@ -39,11 +44,6 @@ conditions:
 - name: MNHD
   negate: false
   pattern: MNHD
-  required: false
-  type: release_group
-- name: Vialle
-  negate: false
-  pattern: Vialle
   required: false
   type: release_group
 tests:
